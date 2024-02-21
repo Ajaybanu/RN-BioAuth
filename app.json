@@ -1,6 +1,12 @@
 {
   "expo": {
-    "name": "bioApp",
-    "slug": "bioApp"
+    "plugins": [
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow $(BioAPP) to use Face ID."
+        }
+      ]
+    ]
   }
 }
