@@ -7,6 +7,14 @@
           "faceIDPermission": "Allow $(BioAPP) to use Face ID."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "1c06d811-f6ee-4c75-8e6e-1effc44e3a31"
+      }
+    },
+    "android": {
+      "package": "com.ajaybanu.bioapp"
+    }
   }
 }

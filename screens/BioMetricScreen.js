@@ -14,6 +14,7 @@ import * as LocalAuthentication from "expo-local-authentication";
 import { StatusBar } from "expo-status-bar";
 
 const BioMetricScreen = () => {
+  const navigation = useNavigation();
   const [isBiometricSupported, setIsBiometricSupported] = useState(false);
   // face and fingerprint scan
   useEffect(() => {
@@ -72,7 +73,8 @@ const BioMetricScreen = () => {
         "Biometric record not found",
         "Please Login with password ",
         "OK",
-        () => fallBackToDefaultAuth()
+        navigation.navigate("Login")
+       
       );
 
     //authenticate with biometric
@@ -91,7 +93,7 @@ const BioMetricScreen = () => {
     console.log({ savedBiometrics });
     console.log({ biometricAuth });
   };
-  const navigation = useNavigation();
+ 
 
   const handleSetupComplete = () => {
     // Implement logic to set up biometric authentication
